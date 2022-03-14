@@ -1,10 +1,15 @@
-pipeline {
-  triggers {
-    pollSCM('') // Enabling being build on Push
-  }
-  stages {
-    stage ("welcome") {
-    	echo "Welcome"
+pipeline{
+   agent any     
+     triggers {
+        githubPush()
+      }
+    stages {
+        stage('Welcome Step') {
+            steps { 
+                echo 'Welcome to LambdaTest'
+                echo 'Welcome 1234'
+            }
+        }
     }
-  }
-}
+ }
+
