@@ -1,3 +1,5 @@
+@Library('docker')_
+
 pipeline{
    agent any     
      triggers {
@@ -8,6 +10,7 @@ pipeline{
             steps { 
                 echo 'Welcome to LambdaTest'
                 echo 'Welcome 1234'
+                call(app, app,  myapp, myapp)
             }
         }
     }
