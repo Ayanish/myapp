@@ -1,4 +1,6 @@
-@Library('docker')_
+ libraries {
+     lib('docker')
+ }
 
 pipeline{
    agent any     
