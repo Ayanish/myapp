@@ -1,11 +1,10 @@
-node {
-  stage("Git check out") {
-    git 'https://github.com/SaiKrishna2681/myapp.git'
+pipeline {
+  triggers {
+    pollSCM('') // Enabling being build on Push
   }
-  stage("build") {
-    sh 'chmod 777 build-tools-images.sh'
-    sh './build-tools-images.sh'
-    sh 'chmod 777 build-package.sh'
-    sh './build-package.sh'
+  stages {
+    stage ("welcome") {
+    	echo "Welcome"
+    }
   }
 }
