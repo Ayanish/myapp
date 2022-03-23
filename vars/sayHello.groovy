@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String tools String project) {
+def call(String tools, String project) {
   echo "Project Name : ${tools}"
   sh "docker build \
   --build-arg maven_version=3.8.4 \
