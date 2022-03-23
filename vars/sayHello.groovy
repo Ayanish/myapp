@@ -11,7 +11,7 @@ def call(String tools, String app) {
 
   
   sh "docker build -t ${app} ."
-  sh "docker login -u 2681 -p Sai@2681"
+  sh "docker login -u 2681 -p Welcome@2681"
   sh "docker tag ${app}:latest 2681/${app}:latest"
   sh "docker push 2681/${app}:latest"
 }
