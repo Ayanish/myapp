@@ -9,6 +9,6 @@ def call(String app) {
   -f tools.Dockerfile \
   . "
 
-  sh "docker pull nginx -t ${app} "
-  sh "docker build ${app}"
+  sh "docker pull nginx  "
+  sh "docker build -t ${app}"
 }
