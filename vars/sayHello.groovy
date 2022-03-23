@@ -6,6 +6,6 @@ def call(String tools) {
   --buid-arg maven_version=3.8.4 \
   --build-arg java_version=11 \
   -t ${tools} \
-  -f tools.Dockerfile 
+  -f tools.Dockerfile \
   . "
 }
