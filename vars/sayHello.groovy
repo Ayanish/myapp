@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String tools) {
+def call(String tools String project) {
   echo "Project Name : ${tools}"
   sh "docker build \
   --build-arg maven_version=3.8.4 \
@@ -9,5 +9,5 @@ def call(String tools) {
   -f tools.Dockerfile \
   . "
 
-  sh "mvn -f pom.xml package"
+  sh "docker build nginx -t ${project} "
 }

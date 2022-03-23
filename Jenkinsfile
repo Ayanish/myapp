@@ -11,7 +11,7 @@ pipeline{
                 echo 'Welcome to LambdaTest'
                 echo 'Welcome 8790'
 				echo 'Hello, world'
-                sayHello 'myapp'
+                sayHello 'myapp, app'
             }
         }
     }
