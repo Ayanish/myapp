@@ -9,7 +9,7 @@ def call(String tools) {
   -f tools.Dockerfile \
   . "
 
-  sh "docker build \
+  sh "docker run \
      ${tools} \
      mvn -f pom.xml package 
   "
