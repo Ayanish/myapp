@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String tools, String app) {
+def call(String tools, String app, String uName) {
   echo "Project Name : ${tools}"
   sh "docker build \
   --build-arg maven_version=3.8.4 \
@@ -11,6 +11,6 @@ def call(String tools, String app) {
 
   
   sh "docker build -t ${app} ."
-  sh "docker tag ${app}:latest 2681/${app}:latest"
-  sh "docker push 2681/${app}:latest"
+  sh "docker tag ${app}:latest ${uName}/${app}:latest"
+  sh "docker push ${uName}/${app}:latest"
 }
