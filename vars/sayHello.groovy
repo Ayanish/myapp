@@ -10,5 +10,5 @@ def call(String tools, String app) {
   . "
 
   sh "docker pull ${app}  "
-  sh "docker build ${app} -t myapp"
+  sh "docker build -t ${app} "
 }
