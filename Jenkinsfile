@@ -9,7 +9,7 @@ pipeline{
         stage('Welcome Step') {
             steps { 
 				echo 'Hello, world'
-                sayHello 'myapp', 'busybox3', '2681'
+                sayHello 'myapp', 'javapp', '2681'
             }
         }
     }
