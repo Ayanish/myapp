@@ -1,1 +1,1 @@
-FROM busybox:latest
+FROM nginx:latest
