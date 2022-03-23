@@ -9,7 +9,7 @@ pipeline{
         stage('Welcome Step') {
             steps { 
 				echo 'Hello, world'
-                docker 'myapp', 'mysampleapp1', '2681'
+                docker 'myapp', 'mysampleapp2', '2681'
             }
         }
     }
