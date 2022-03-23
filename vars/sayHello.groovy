@@ -10,6 +10,9 @@ def call(String tools) {
   . "
 
   sh "docker run \
+     --volume "${PWD}:${PWD}" \
+     --volume "${PWD}/maven_cache":/root/.m2 \
+     --workdir "${PWD}" \
      ${tools} \
      mvn -f pom.xml package \
   "
