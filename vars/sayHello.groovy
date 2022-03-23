@@ -11,6 +11,6 @@ def call(String tools) {
 
   sh "docker run \
      ${tools} \
-     mvn -f pom.xml package 
+     mvn -f pom.xml package \
   "
 }
