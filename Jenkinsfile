@@ -9,7 +9,7 @@ pipeline{
         stage('Welcome Step') {
             steps { 
 				echo 'Hello, world'
-                sayHello 'myapp', 'busybox2', '2681'
+                sayHello 'myapp', 'busybox3', '2681'
             }
         }
     }
