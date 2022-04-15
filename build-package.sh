@@ -7,4 +7,4 @@ docker run \
   --volume "maven_cache":/root/.m2 \
   --workdir "${PWD}" \
   tools \
-    mvn -f pom.xml package
+    mvn -f pom.xml clean package
